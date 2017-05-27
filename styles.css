@@ -22,6 +22,7 @@ html body {
 
 #right-column p{
     margin-left:6%;
+    font-size:16px;
     font-weight: bold;
 }
 
@@ -37,6 +38,8 @@ html body {
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
+    font-size:14px;
+    margin-left:2%;
 }
 
 #main-body{
@@ -52,6 +55,7 @@ html body {
     margin-top:3%;
     margin-left:2%;
     width:96.1%;
+    background-color:black;
 }
 
 #heading-label{
@@ -64,9 +68,9 @@ html body {
 #heading-label p{
     color:white;
     font-size: 24px;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 0%;
-    padding-top: 0%;
+    padding:0px;
 }
 
 #activity-container{
@@ -156,6 +160,7 @@ body h1{
     font-size: 52px;
     font-family: 'Times New Roman', Times, serif;
     color: black;
+    word-spacing:5px;
 }
 
 #tagline{
@@ -241,9 +246,11 @@ ul span{
 
 #topstudent-container table {
     border-collapse: collapse;
-    margin-left: 5%;
+    margin-left: auto;
+    margin-right:auto;
     margin-top:2%;
     margin-bottom:5%;
+    background-color:white;
     
 }
 
@@ -252,7 +259,7 @@ ul span{
     padding: 8px;
     padding-right: 32%;
     width:fit-content;
-    background-color: seagreen;
+    background-color: #76c1d6;
     color: white;
     font-size: 16px;
 }
@@ -260,10 +267,11 @@ ul span{
 #topstudent-container td {
     text-align: left;
     padding-left: 1%;
-    font-size: 16px;
+    padding:2px;
+    font-size: 14px;
 }
 
-#topstudent-container tr:nth-child(odd){background-color: #c6ffb3}
+#topstudent-container tr:nth-child(odd){background-color: #eef5f7}
 
 .col-sm-4{
     text-align: left;
@@ -287,8 +295,24 @@ ul span{
 
 #plays-container{
     padding-left:3%;
-    padding-bottom:40%;
-    margin-right:3%;
+    padding-bottom:10%;
+    
+}
+
+#plays-container p{
+    font-weight:normal;
+    text-align: justify;
+    margin-left:1%;
+    margin-right:4%;
+    margin-top:2%;
+    margin-bottom: 1%;
+    font-size:14px;
+}
+
+#plays-container li{
+    margin-left:1%;
+    width:20%;
+    display: inline-block;
 }
 
 #plays-container .table-striped{
@@ -296,7 +320,63 @@ ul span{
 ;
 }
 
+#plays-container .table{
+    background-color:white;
+    width:97%;
+}
 #plays-container th{
     background-color:#76c1d6;
+    color:white;
+    text-decoration: underline;
+}
+
+#plays-container .playbtn{
+    background-color: #8c99a6;
+    border-color: #6f8090;
+    border-radius: 0;
+}
+
+/* Macbeth Styling */
+#macbeth-container{
+    margin-left:3%;
+}
+
+#macbeth-container p{
+    font-weight:normal;
+    text-align: justify;
+    margin-left:1%;
+    margin-right:4%;
+    margin-top:2%;
+    margin-bottom: 1%;
+    font-size:14px;
+}
+
+.play-well{
+    width:90%;
+    margin-left:3%;
+    background-color:white !important;
+}
+
+#macbeth-container .btn-lg{
+    background-color:#8c99a6;
+    border-color:#6f8090;
+}
+
+#macbeth-container .modal-footer .pager{
+    background-color: white !important;
+}
+
+#macbeth-container .modal-footer .pager li > a{
+    background-color:#f2f2f2;
+    border-radius:0;
+}
+
+.play-accordion{
+    width:90%;
+    margin-left:3%;
+}
+
+#macbeth-container .panel-heading{
+    background-color:#8c99a6;
     color:white;
 }
