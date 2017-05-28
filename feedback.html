@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wannachai!</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script>
+            $(document).ready(function(){
+                    $("#review-btn").click(function(){
+                        if ( !$("#comment1").val())
+                        {
+                            if (!$("#comment1").val())
+                            {
+                                $("#comment1").addClass("invalid-control");
+                                $(".error-msg1").show(); 
+                            } 
+                        }else 
+                            {
+                                 $("#comment1").removeClass("invalid-control");
+                                 $(".error-msg1").hide(); 
+                                 $(".well").hide();
+                                 $("h4").hide();
+                                 $(".form-control").hide();
+                                 $("#1").hide();
+                                 $(this).hide();
+
+                                 
+                                 $("#remove").hide();
+                                 $("#changes").addClass("completed");
+                                 $("#changes").removeClass("incompleted");
+                                 $("#hidden1").show();
+                                 $("#hidden").show();
+                                 $("#ok").toggle();
+
+                                 
+                                    
+                            }
+                    });
+            });
+        </script>
+    </head>
+    <body>
+        <img src="images/Logo.png" id="logo">
+        <h1>Shakespeare Academy</h1>
+        <p id="tagline">Where thy seeketh out knowledge.</p>
+        <div id="userstatus"><img id="avatar" src="images/avatar.png"><p id="logout">Hi Charlie, ( <a>Logout</a> )</p></div>
+        <div class="alert alert-info"><strong>Remember: </strong> Shakespeare Academy will be down for maintenance around 3:00am GST+12. Make sure you save all your work!</div>
+        
+       <div id="left-column">
+            <ul>
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li><a href="plays.html"><img id="assignment-logo" src="images/drama.png"> Plays</a></li>
+                <li><a href="assignment.html"><img id="assignment-logo" src="images/assignment1.png"> Assignments</a></li>
+                <li><a class="active" href="statistics.html"><span class="glyphicon glyphicon-stats"></span> Statistics</a></li>
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+            </ul>
+       </div>
+
+       <div id="main-body">
+            <div id="heading-label"><p>Feedback - Assignment 101</p></div>
+            <div id="feedback-container">
+                <p>If you have not completed giving feedback, please do so before the due date.</p>
+                <div class="container">           
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Lee Faker</td>
+                            <td class="incompleted" id="changes" style="text-align:center;"><span id="remove">Incomplete</span><span id="hidden">Completed</span> <span class="glyphicon glyphicon-remove" id="ok"></span><span class="glyphicon glyphicon-ok" id="hidden1"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Mary Sheeple</td>
+                            <td class="completed" style="text-align:center;">Completed <span class="glyphicon glyphicon-ok"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Ju Fang Soon</td>
+                            <td class="completed" style="text-align:center;">Completed <span class="glyphicon glyphicon-ok"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4>Question: Pick a theme of the story Macbeth and explain its meaning.</h4>
+                <p style="margin-left:3%" id="1">Read the student's response and provide feedback.</p>
+                <div class="well play-well">
+                    Kingship and Natural Order<br><br>
+
+                    Macbeth is set in a society in which the notion of honor to one's word and loyalty to one's superiors is absolute. At the top of this hierarchy is the king, God's representative on Earth. Other relationships also depend on loyalty: comradeship in warfare, hospitality of host towards guest, and the loyalty between husband and wife. In this play, all these basic societal relationships are perverted or broken. Lady Macbeth's domination over her husband, Macbeth's treacherous act of regicide, and his destruction of comradely and family bonds, all go against the natural order of things.<br><br>
+
+                    The medieval and renaissance view of the world saw a relationship between order on earth, the so-called microcosm, and order on the larger scale of the universe, or macrocosm. Thus, when Lennox and the Old Man talk of the terrifying alteration in the natural order of the universe — tempests, earthquakes, darkness at noon, and so on — these are all reflections of the breakage of the natural order that Macbeth has brought about in his own microcosmic world.<br><br>
+
+                </div>
+                <h4>Please provide your feedback here.<span class="error-msg1" style="font-size:12px; margin-right:7%;margin-top:1%;"> Please complete your feedback.</span></h4>
+                <div class="form-group">
+                    <textarea class="form-control" rows="7" id="comment1"></textarea>
+                </div>
+                <div id="review"><a><button type="button" id="review-btn" class="btn btn-default feedback-btn">Submit</button></a></div>
+            </div>
+       </div>
+       <div id="right-column">
+            <div class="alert alert-danger .alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <span class="glyphicon glyphicon-hourglass"></span>
+                <strong style="font-size:18px;">Cutting it close!</strong> Remember to submit <span style="text-decoration:underline"><a style="color:inherit;">Assignment 201</a></span> by 11:59pm.
+            </div>
+            <p>Upcoming</p>   
+            <div class="separator"></div>
+            <ul>
+                <li><span class="glyphicon glyphicon-align-justify" style="margin-right:2%"></span> Assignment 201</li>
+                <div class="separator"></div>
+                <li><span class="glyphicon glyphicon-comment" style="margin-right:2%"></span>MBT - A4</li>
+                <div class="separator"></div>
+            </ul>
+            <p>Past</p>   
+            <div class="separator"></div>
+            <ul>
+                <li><span class="glyphicon glyphicon-th-list" style="margin-right:2%"></span>Macbeth MCQ 1</li>
+            </ul>
+        </div>
+    </body>
+</html>
