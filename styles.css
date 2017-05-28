@@ -359,9 +359,25 @@ ul span{
     margin-right:3%;
 }
 
+#plays-container #myBtn{
+    float:right;
+    margin-right:3%;
+    background-color:	#262626;
+    border:none;
+    color:white;
+    font-size:12px;
+    padding:4px;
+    padding-right: 6px;
+}
+
+#plays-container #myBtn:hover{
+    background-color: #404040
+}
+
 /* Macbeth Styling */
 #macbeth-container{
     margin-left:3%;
+    margin-bottom: 10%;
 }
 
 #macbeth-container p{
@@ -380,10 +396,6 @@ ul span{
     background-color:white !important;
 }
 
-#macbeth-container .btn-lg{
-    background-color:#8c99a6;
-    border-color:#6f8090;
-}
 
 #macbeth-container .modal-footer .pager{
     background-color: white !important;
@@ -397,6 +409,7 @@ ul span{
 .play-accordion{
     width:90%;
     margin-left:3%;
+    
 }
 
 #macbeth-container .panel-heading{
@@ -406,4 +419,27 @@ ul span{
 
 .hidden-page{
     display:none;
+}
+
+/*ASSIGNMENT SPECIFIC STYLING*/
+
+#assignment-container{
+    padding-left:3%;
+    padding-bottom:10%;
+    margin-right:3%;
+    margin-top:5%;
+}
+
+#assignment-container p{
+    font-weight:normal;
+    text-align: justify;
+    margin-left:1%;
+    margin-right:4%;
+    margin-top:2%;
+    margin-bottom: 1%;
+    font-size:14px;
+}
+
+#assignment-container li:hover{
+    background-color:#e6f2ff;
 }
