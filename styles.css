@@ -344,6 +344,22 @@ ul span{
     text-decoration: underline;
 }
 
+#plays-container form{
+    width:60%;
+    display: inline-block;
+}
+
+#plays-container .btn-group{
+    display: inline-block;
+    vertical-align: top;
+    float:right;
+
+}
+
+.table-options {
+    margin-right:3%;
+}
+
 /* Macbeth Styling */
 #macbeth-container{
     margin-left:3%;
