@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wannachai!</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script>
+            $(document).ready(function(){
+                    $("#submit-btn").click(function(){
+                        if ( !$("#comment1").val() || !$("#comment2").val() || !$("#comment3").val())
+                        {
+                            if (!$("#comment1").val())
+                            {
+                                $("#comment1").addClass("invalid-control");
+                                $(".error-msg1").show(); 
+                            } else 
+                            {
+                                 $("#comment1").removeClass("invalid-control");
+                                 $(".error-msg1").hide(); 
+
+                            }
+
+                            if (!$("#comment2").val())
+                            {
+                                $("#comment2").addClass("invalid-control");
+                                $(".error-msg2").show();
+                            } else 
+                            {
+                                 $("#comment2").removeClass("invalid-control");
+                                 $(".error-msg2").hide(); 
+                            }
+
+                            if (!$("#comment3").val())
+                            {
+                                $("#comment3").addClass("invalid-control");
+                                $(".error-msg3").show();
+                            } else 
+                            {
+                                 $("#comment3").removeClass("invalid-control");
+                                 $(".error-msg3").hide(); 
+                            }
+                        } else
+                        {
+                            $("#comment1").removeClass("invalid-control");
+                            $(".error-msg1").hide(); 
+                            $("#comment2").removeClass("invalid-control");
+                            $(".error-msg2").hide(); 
+                            $("#comment3").removeClass("invalid-control");
+                            $(".error-msg3").hide(); 
+
+                            window.location.href = "review.html";
+                        }
+
+                    });
+                });
+        </script>
+        <script>
+            // Run on page load
+            window.onload = function() {
+
+                // If values are not blank, restore them to the fields
+                var name = sessionStorage.getItem('name');
+                if (name !== null) $('#comment1').val(name);
+
+                var email = sessionStorage.getItem('email');
+                if (email !== null) $('#comment2').val(email);
+
+                var subject= sessionStorage.getItem('subject');
+                if (subject!== null) $('#comment3').val(subject);
+
+            }
+
+            // Before refreshing the page, save the form data to sessionStorage
+            window.onbeforeunload = function() {
+                sessionStorage.setItem("name", $('#comment1').val());
+                sessionStorage.setItem("email", $('#comment2').val());
+                sessionStorage.setItem("subject", $('#comment3').val());
+            }
+        </script>
+    </head>
+    <body>
+        <img src="/images/Logo.png" id="logo">
+        <h1>Shakespeare Academy</h1>
+        <p id="tagline">Where thy seeketh out knowledge.</p>
+        <div id="userstatus"><img id="avatar" src="images/avatar.png"><p id="logout">Hi Charlie, ( <a>Logout</a> )</p></div>
+        <div class="alert alert-info"><strong>Remember: </strong> Shakespeare Academy will be down for maintenance around 3:00am GST+12. Make sure you save all your work!</div>
+        
+       <div id="left-column">
+            <ul>
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li><a href="plays.html"><img id="assignment-logo" src="images/drama.png"> Plays</a></li>
+                <li><a class="active" href="assignment.html"><img id="assignment-logo" src="images/assignment1.png"> Assignments</a></li>
+                <li><a href="statistics.html"><span class="glyphicon glyphicon-stats"></span> Statistics</a></li>
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+            </ul>
+       </div>
+
+       <div id="main-body">
+          <div id="heading-label"><p>Assignment 201</p></div>
+          <div id="a201-container">
+            <p style="margin-left:0%;">Read the following excerpt and answer the following questions.</p>
+            <h3>Macbeth - ACT I Scene VI</h3>
+                <div class="well play-well">
+                    
+                    <strong>ACT I SCENE VI  	Before Macbeth's castle.</strong>	<br> 
+                    [ Hautboys and torches. Enter DUNCAN, MALCOLM, DONALBAIN, BANQUO, LENNOX, MACDUFF, ROSS, ANGUS, and Attendants ]<br><br>
+                    DUNCAN	This castle hath a pleasant seat; the air
+                    Nimbly and sweetly recommends itself
+                    Unto our gentle senses.<br><br>
+                    BANQUO	This guest of summer,
+                    The temple-haunting martlet does approve,
+                    By his loved mansionry, that the heaven's breath
+                    Smells wooingly here: no jutty, frieze,
+                    Buttress, nor coign of vantage, but this bird
+                    Hath made his pendent bed and procreant cradle:
+                    Where they most breed and haunt, I have observed,
+                    The air is delicate.<br><br>
+                    [Enter LADY MACBETH]
+                    DUNCAN	See, see our honoured hostess!	
+                    The love that follows us sometime is our trouble,
+                    Which still we thank as love. Herein I teach you
+                    How you shall bid God 'ild us for your pains,
+                    And thank us for your trouble.<br><br>
+                    LADY MACBETH	All our service
+                    In every point twice done and then done double
+                    Were poor and single business to contend
+                    Against those honours deep and broad wherewith
+                    Your majesty loads our house: for those of old,
+                    And the late dignities heap'd up to them,
+                    We rest your hermits.	<br><br>
+                    DUNCAN	Where's the thane of Cawdor?
+                    We coursed him at the heels, and had a purpose
+                    To be his purveyor: but he rides well;
+                    And his great love, sharp as his spur, hath holp him
+                    To his home before us. Fair and noble hostess,
+                    We are your guest to-night.<br><br>
+                    LADY MACBETH	Your servants ever
+                    Have theirs, themselves and what is theirs, in compt,
+                    To make their audit at your highness' pleasure,
+                    Still to return your own.<br><br>
+                    DUNCAN	Give me your hand;
+                    Conduct me to mine host: we love him highly,
+                    And shall continue our graces towards him.	30
+                    By your leave, hostess.
+                </div>
+            <h3>Questions</h3>
+                <div class="question-container">
+                    <ul>
+                        <li>
+                            <p>1. What is the theme of this scene?<span class="error-msg1"> Please enter your answer here.</span></p>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" id="comment1"></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <p>2. Explain the relationship between Lady Macbeth and King Duncan.<span class="error-msg2"> Please enter your answer here.</span></p> 
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" id="comment2"></textarea>
+                            </div>   
+                        </li>
+                        <li>
+                            <p>3. Explain the symbolism in this scene.<span class="error-msg3"> Please enter your answer here.</span></p>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" id="comment3"></textarea>
+                            </div>
+                        </li>
+                    </ul>   
+                    <div id="submit"><a><button type="button" id="submit-btn" class="btn btn-default">Submit</button></a></div>     
+                </div>    
+          </div>
+            <div class="footer">
+                <div id="footer-container">
+                    <div class="row">
+                        <div class="col-sm-4"><a>Privacy Policy</a></div>
+                        <div class="col-sm-4"><a>Shakespeare Academy</a></div>                    
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"><a>Disclaimers</a></div>
+                        <div class="col-sm-4"><a>Contact Us</a></div>                    
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"><a>Developers</a></div>
+                        <div class="col-sm-4"><a>Terms of Use</a></div>                    
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <div id="right-column">
+            <div class="alert alert-danger .alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <span class="glyphicon glyphicon-hourglass"></span>
+                <strong style="font-size:18px;">Cutting it close!</strong> Remember to submit <span style="text-decoration:underline"><a style="color:inherit;">Assignment 201</a></span> by 11:59pm.
+            </div>
+            <p>Upcoming</p>   
+            <div class="separator"></div>
+            <ul>
+                <li><span class="glyphicon glyphicon-align-justify" style="margin-right:2%"></span> Assignment 201</li>
+                <div class="separator"></div>
+                <li><span class="glyphicon glyphicon-comment" style="margin-right:2%"></span>MBT - A4</li>
+                <div class="separator"></div>
+            </ul>
+            <p>Past</p>   
+            <div class="separator"></div>
+            <ul>
+                <li><span class="glyphicon glyphicon-th-list" style="margin-right:2%"></span>Macbeth MCQ 1</li>
+            </ul>
+        </div>
+    </body>
+</html>
+
