@@ -9,7 +9,7 @@
         <script src="bootstrap/js/bootstrap.js"></script>
         <script>
             $(document).ready(function(){
-                    $("#submit-btn").click(function(){
+                    $("#review-btn").click(function(){
                         if ( !$("#comment1").val() || !$("#comment2").val() || !$("#comment3").val())
                         {
                             if (!$("#comment1").val())
@@ -51,10 +51,29 @@
                             $("#comment3").removeClass("invalid-control");
                             $(".error-msg3").hide(); 
 
-                            window.location.href = "review.html";
+                            $("#a201-container .play-well").hide();
+                            $(".form-control").prop('disabled', true);
+
+                            $(this).hide();
+                            $("#edit-btn").show();
+                            $("#submit-btn").show();
                         }
 
                     });
+
+                     $("#edit-btn").click(function(){
+                        $(".form-control").prop('disabled', false);
+                        $("#a201-container .play-well").show();
+                     });
+
+                     $("#submit-btn").click(function(){
+                        $("#a201-container").hide();
+                        $("#a201-container .play-well").hide();
+                        $("#submitted-container").show();
+
+                        var hash = window.location.hash;
+                        $(hash).addClass('active');
+                     });
                 });
         </script>
         <script>
@@ -146,31 +165,40 @@
                     And shall continue our graces towards him.	30
                     By your leave, hostess.
                 </div>
-            <h3>Questions</h3>
+          
                 <div class="question-container">
+                    <h3 style="text-align: left">Questions</h3>
                     <ul>
                         <li>
                             <p>1. What is the theme of this scene?<span class="error-msg1"> Please enter your answer here.</span></p>
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" id="comment1"></textarea>
+                                <textarea class="form-control" rows="7" id="comment1"></textarea>
                             </div>
                         </li>
                         <li>
                             <p>2. Explain the relationship between Lady Macbeth and King Duncan.<span class="error-msg2"> Please enter your answer here.</span></p> 
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" id="comment2"></textarea>
+                                <textarea class="form-control" rows="7" id="comment2"></textarea>
                             </div>   
                         </li>
                         <li>
                             <p>3. Explain the symbolism in this scene.<span class="error-msg3"> Please enter your answer here.</span></p>
                             <div class="form-group">
-                                <textarea class="form-control" rows="5" id="comment3"></textarea>
+                                <textarea class="form-control" rows="7" id="comment3"></textarea>
                             </div>
                         </li>
                     </ul>   
-                    <div id="submit"><a><button type="button" id="submit-btn" class="btn btn-default">Submit</button></a></div>     
+                    <div id="review"><a><button type="button" id="review-btn" class="btn btn-default">Review</button></a></div>
+                    <div id="submit"><a><button type="button" id="edit-btn" class="btn btn-default">Edit</button></a><a><button type="button" id="submit-btn" class="btn btn-default">Submit</button></a></div>       
                 </div>    
-          </div>
+            </div>
+            <div id="submitted-container">
+                <div id="submitted-div">
+                    <h3 style="font-size:18px;margin-left:10%;"><span class="glyphicon glyphicon-ok" style="margin-right:2%;"></span> Your assignment has been submitted.</h3>
+                    <div id="review"><a href="assignment.html" class="btn btn-primary btn-block playbtn">Return to Assignments</a></div>
+
+                </div>
+            </div>
             <div class="footer">
                 <div id="footer-container">
                     <div class="row">
@@ -187,6 +215,7 @@
                     </div>
                 </div>
             </div>
+
        </div>
 
        <div id="right-column">
