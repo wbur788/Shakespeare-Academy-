@@ -7,6 +7,43 @@
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                //Next Button for Modal Window
+                $(".previous").hide();
+                $(".modal-footer .next").click(function(){
+                    $(".previous").show(); 
+                    if ($(".current-page").next().length != 0)
+                    {
+                        $(".current-page").addClass("hidden-page");
+                        $(".current-page").removeClass("current-page").next().addClass("current-page");
+                        $(".current-page").removeClass("hidden-page"); 
+
+                        if ($(".current-page").next().length == 0)
+                        {
+                            $(".next").hide();
+                        }
+                    }
+                });
+
+                //Previous Button for Modal Window
+                $(".modal-footer .previous").click(function(){
+                     $(".next").show();
+                    if ($(".current-page").prev().length != 0)
+                    {
+                        $(".current-page").addClass("hidden-page");
+                        $(".current-page").removeClass("current-page").prev().addClass("current-page");
+                        $(".current-page").removeClass("hidden-page"); 
+
+                        if ($(".current-page").prev().length == 0)
+                        {
+                            $(".previous").hide();
+                        }
+                    }
+                });
+            });
+        </script
     </head>
     <body>
         <img src="/images/Logo.png" id="logo">
@@ -41,7 +78,7 @@
                         <h4 class="modal-title">Macbeth - Full Version</h4>
                         </div>
                         <div class="modal-body">
-                        <p>
+                        <p class="current-page initial-page">
                             <strong>ACT I  SCENE I 	A desert place.</strong>	<br><br> 
                             [Thunder and lightning. Enter three Witches]<br><br>  
                             First Witch	When shall we three meet again
@@ -60,6 +97,84 @@
                             <br><br>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, ipsum ullamcorper malesuada volutpat, urna eros consequat metus, et ultrices erat sapien ac nulla. Vestibulum eget felis ac elit pellentesque molestie. Sed a facilisis urna. Suspendisse efficitur eros ac risus vehicula, sed efficitur orci commodo. Mauris tempus velit id ullamcorper ornare. Aliquam vestibulum felis non velit facilisis interdum. Morbi in condimentum risus. Etiam mattis accumsan enim nec maximus. Maecenas pharetra tellus et aliquet malesuada. Etiam ut congue leo, vel sodales tortor. Proin eget tellus vitae arcu vehicula condimentum. <br><br>
                             Nunc tincidunt maximus rutrum. Suspendisse viverra lacinia tempus. In posuere libero sed tortor blandit rhoncus. Donec finibus fringilla metus, vitae commodo sem. Proin egestas sagittis purus, a pretium dolor viverra ut. Morbi consectetur nulla justo, nec ultricies turpis efficitur a. Morbi dapibus est non aliquam accumsan. Curabitur ut lorem accumsan, interdum enim quis, sollicitudin sapien.   
+                        </p>
+                        <p class="hidden-page">
+                            <strong>ACT I SCENE II 	A camp near Forres.	</strong><br><br>
+                            [ Alarum within. Enter DUNCAN, MALCOLM, DONALBAIN, LENNOX, with Attendants, meeting a bleeding Sergeant ]<br><br>
+                            DUNCAN	What bloody man is that? He can report,
+                            As seemeth by his plight, of the revolt
+                            The newest state.<br><br>
+                            MALCOLM	This is the sergeant
+                            Who like a good and hardy soldier fought	
+                            'Gainst my captivity. Hail, brave friend!
+                            Say to the king the knowledge of the broil
+                            As thou didst leave it.<br><br>
+                            Sergeant	Doubtful it stood;
+                            As two spent swimmers, that do cling together	
+                            And choke their art. The merciless Macdonwald--
+                            Worthy to be a rebel, for to that
+                            The multiplying villanies of nature
+                            Do swarm upon him--from the Western Isles
+                            Of kerns and gallowglasses is supplied;	15
+                            And fortune, on his damned quarrel smiling,
+                            Show'd like a rebel's whore: but all's too weak:
+                            For brave Macbeth--well he deserves that name--
+                            Disdaining fortune, with his brandish'd steel,
+                            Which smoked with bloody execution,	
+                            Like valour's minion carved out his passage
+                            Till he faced the slave;
+                            Which ne'er shook hands, nor bade farewell to him,
+                            Till he unseam'd him from the nave to the chaps,
+                            And fix'd his head upon our battlements.	<br><br>
+                            DUNCAN	O valiant cousin! worthy gentleman!
+                            Sergeant	As whence the sun 'gins his reflection
+                            Shipwrecking storms and direful thunders break,
+                            So from that spring whence comfort seem'd to come
+                            Discomfort swells. Mark, king of Scotland, mark:	
+                            No sooner justice had with valour arm'd
+                            Compell'd these skipping kerns to trust their heels,
+                            But the Norweyan lord surveying vantage,
+                            With furbish'd arms and new supplies of men
+                            Began a fresh assault.	<br><br>
+                            DUNCAN	Dismay'd not this<
+                            Our captains, Macbeth and Banquo?<br><br>
+                            Sergeant	Yes;<br><br>
+                            As sparrows eagles, or the hare the lion.
+                        </p>
+                        <p class="hidden-page">
+                           <strong>ACT I SCENE III 	A heath near Forres.</strong><br><br>	 
+                                Thunder. Enter the three Witches.	 
+                            First Witch 	Where hast thou been, sister?<br><br>	 
+                            Second Witch 	Killing swine.<br><br>	 
+                            Third Witch 	Sister, where thou?	<br><br> 
+                            First Witch 	A sailor's wife had chestnuts in her lap,
+                                And munch'd, and munch'd, and munch'd:--	 
+                                'Give me,' quoth I:	 
+                                'Aroint thee, witch!' the rump-fed ronyon cries.	 
+                                Her husband's to Aleppo gone, master o' the Tiger:	 
+                                But in a sieve I'll thither sail,
+                                And, like a rat without a tail,	 	
+                                I'll do, I'll do, and I'll do.	 <br><br>
+                            Second Witch 	I'll give thee a wind.	 <br><br>
+                            First Witch 	Thou'rt kind.	 <br><br>
+                            Third Witch 	And I another.<br><br>
+                            First Witch 	I myself have all the other,	 	
+                                And the very ports they blow,	 
+                                All the quarters that they know	 
+                                I' the shipman's card.	 
+                                I will drain him dry as hay:
+                                Sleep shall neither night nor day	 	
+                                Hang upon his pent-house lid;	 
+                                He shall live a man forbid:	 
+                                Weary se'n nights nine times nine	 
+                                Shall he dwindle, peak and pine:
+                                Though his bark cannot be lost,	 	
+                                Yet it shall be tempest-tost.	 
+                                Look what I have.	 <br><br>
+                            Second Witch 	Show me, show me.	 <br><br>
+                            First Witch 	Here I have a pilot's thumb,
+                                Wreck'd as homeward he did come.	 	
+                                Drum within. 
                         </p>
                         </div>
                         <div class="modal-footer">
